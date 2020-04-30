@@ -279,7 +279,7 @@ server <- function(input, output,session) {
         else if (input$select2==3) {  
             Name <- input$text
             m <- pls(dataXCAL(), YCAL(), scale = T, cv = 1, ncomp.selcrit = 'min', info = "YREF prediction model")
-            m1 <- pls(dataXCAL(), YCAL(), scale = T, cv = 1, exclcols = getSelectivityRatio(m, ncomp = NULL) < 0.0003)
+            m1 <- pls(dataXCAL(), YCAL(), scale = T, cv = 1, exclcols = getSelectivityRatio(m, ncomp = m$ncomp.selected) < 0.0003)
             ncomp <- m1$ncomp.selected
             res = predict(m1, dataXVAL(), YVAL())
             df1 <- data.frame(YCAL())
@@ -368,9 +368,9 @@ server <- function(input, output,session) {
         }
         else if (input$select2==6) {  
           m <- pls(dataXCAL(), YCAL(), scale = T, cv = 1, ncomp.selcrit = 'min', info = "YREF prediction model")
-          m1 <- pls(dataXCAL(), YCAL(), scale = T, cv = 1, ncomp.selcrit = 'min', exclcols = getSelectivityRatio(m, ncomp = NULL) < 0.0003)
+          m1 <- pls(dataXCAL(), YCAL(), scale = T, cv = 1, ncomp.selcrit = 'min', exclcols = getSelectivityRatio(m, ncomp = m$ncomp.selected) < 0.0003)
           ncomp <- m1$ncomp.selected
-          exclcols = (getSelectivityRatio(m1, ncomp = ncomp.selected)<1)
+          exclcols = (getSelectivityRatio(m1, ncomp = ncomp)<0.0003)
           remove <-  c("TRUE") 
           subset <- exclcols[-which(exclcols %in% remove),]
           subset1 <- as.data.frame(subset)

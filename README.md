@@ -30,9 +30,9 @@ Clone or download the repository and run the SelectWave.R as a Shiny app, e.g. t
 - shinyFiles
 
 Installation can be done using the following commands in R:
-install.packages(c('baseline', 'caret', 'chillR', 'DT', 'e1071', 'EMSC', 'ggplot2', 'magrittr', 'mdatools', 'plsVarSel', 'prospectr', 'shinycssloaders', 'shinydashboard', 'shinyFiles'))
-library(devtools)
-install_github("nik01010/dashboardthemes")
+`install.packages(c('baseline', 'caret', 'chillR', 'DT', 'e1071', 'EMSC', 'ggplot2', 'magrittr', 'mdatools', 'plsVarSel', 'prospectr', 'shinycssloaders', 'shinydashboard', 'shinyFiles'))`  
+`library(devtools)`  
+`install_github("nik01010/dashboardthemes")`
 
 ## Contact
 Doç. Dr. Fatih KAHRIMAN  

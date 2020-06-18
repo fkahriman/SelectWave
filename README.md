@@ -36,6 +36,9 @@ library(devtools)
 install_github("nik01010/dashboardthemes")
 ```
 
+## Example data
+The `data` folder contains a set of NIR spectra and reference measurements of amylopectin content of milled corn samples.
+
 ## Contact
 Doç. Dr. Fatih KAHRIMAN  
 fkahriman (at) hotmail.com

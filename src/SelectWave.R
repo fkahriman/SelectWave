@@ -517,6 +517,18 @@ server <- function(input, output,session) {
     RMSEP   <- pls::RMSEP(model_pre_selection, newdata=datasetV)$val[1,1,ncomp+1]
     RPDval  <- sd(datasetV$Y)/RMSEP
     df <- data.frame("Variable" = input$text,"Derivative" = input$select_deriv, "Pretreatment" = input$select_pre, "Variable Selection" = input$select_sel, "RMSEC" = RMSEC, "R2Cal" = 100*pls::R2(model_pre_selection, estimate="train")$val[1,1,ncomp+1], "RPDCal" = RPDc, "RMSEP" = RMSEP, "R2Val" = 100*pls::R2(model_pre_selection, newdata=datasetV)$val[1,1,ncomp+1], "RPDVal" = RPDval, check.names = FALSE)
+    withProgress(message = 'Processing', value = 0, {
+      # Number of times we'll go through the loop
+      n <- 20
+      
+      for (i in 1:n) {
+        # Increment the progress bar, and update the detail text.
+        incProgress(1/n, detail = paste("......", i))
+        
+        # Pause for 0.1 seconds to simulate a long computation.
+        Sys.sleep(0.1)
+      }
+    })
     df
   })
   
@@ -655,6 +667,18 @@ server <- function(input, output,session) {
 #        df <- data.frame("Variable" = input$text, "Derivative" = input$select_deriv, "Pretreatment" = input$select_pre, "Variable Selection" = input$select_sel, "RMSEC" = RMSEC, "R2Cal" = pls::R2(model_pre_selection, estimate="train")$val[1,1,ncomp+1], "RPDCal" = RPDc, "RMSECV" = RMSECV, "R2Val" = pls::R2(model_pre_selection, estimate="CV")$val[1,1,ncomp+1], "RPDVal" = RPDcv, check.names = FALSE)
         df
       }
+      withProgress(message = 'Processing', value = 0, {
+        # Number of times we'll go through the loop
+        n <- 20
+        
+        for (i in 1:n) {
+          # Increment the progress bar, and update the detail text.
+          incProgress(1/n, detail = paste("......", i))
+          
+          # Pause for 0.1 seconds to simulate a long computation.
+          Sys.sleep(0.1)
+        }
+      })
       df
     }
   })
@@ -673,18 +697,22 @@ server <- function(input, output,session) {
     if (input$select_meth==1) {
       op21 <- read.csv("~/plstum.csv")
       dt <- datatable(
-        op21[2:11], extensions = 'Buttons', options = list(autoWidth = FALSE, scrollX = TRUE, columnDefs = list(list(width = '10px', targets = c(1, 10))),
-                                                           dom = 'Bfrtip',
-                                                           buttons = c('copy', 'csv', 'excel')
-        )
-      ) %>%
+          op21[2:11], extensions = 'Buttons', 'Scroller', options = list(pageLength = 100,
+                                                                                                 dom = 'Bfrtip',
+                                                                                                 buttons = c('copy', 'csv', 'excel'),deferRender = TRUE,
+                                                                                                 scrollY = 200,
+                                                                                                 scroller = TRUE
+          )
+        ) %>%
         formatRound(c('RMSEC', 'R2Cal', 'RPDCal', 'RMSEP', 'R2Val', 'RPDVal'), 2)
     } else if (input$select_meth==2) {
       op22 <- read.csv("~/svmtum.csv")
       dt <- datatable(
-        op22[2:11], extensions = 'Buttons', options = list(autoWidth = FALSE, scrollX = TRUE, columnDefs = list(list(width = '10px', targets = c(1, 10))),
-                                                           dom = 'Bfrtip',
-                                                           buttons = c('copy', 'csv', 'excel')
+        op22[2:11], extensions = 'Buttons', 'Scroller', options = list(pageLength = 100,
+                                                                       dom = 'Bfrtip',
+                                                                       buttons = c('copy', 'csv', 'excel'),deferRender = TRUE,
+                                                                       scrollY = 200,
+                                                                       scroller = TRUE
         )
       ) %>%
         formatRound(c('RMSEC', 'R2Cal', 'RPDCal', 'RMSEP', 'R2Val', 'RPDVal'), 2)

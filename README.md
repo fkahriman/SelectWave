@@ -12,6 +12,9 @@ Analysis stages in the app include:
 ## Usage
 Clone or download the repository and run the SelectWave.R as a Shiny app, e.g. through R Studio.
 
+## Instructions
+An introduction to the user interface is found in the [User Manual](https://github.com/fkahriman/SelectWave/blob/master/inst/docs/UserManual.pdf).
+
 ## Dependencies
 - baseline
 - caret

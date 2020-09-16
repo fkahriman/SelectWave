@@ -52,287 +52,289 @@ csvFile <- function(input, output, session, stringsAsFactors) {
 
 ### creating custom theme object
 theme_poor_mans_flatly <- shinyDashboardThemeDIY(
-    
-    ### general
-    appFontFamily = "Arial"
-    ,appFontColor = "rgb(33,37,41)"
-    ,primaryFontColor = "rgb(245,245,245)"
-    ,infoFontColor = "rgb(245,245,245)"
-    ,successFontColor = "rgb(33,37,41)"
-    ,warningFontColor = "rgb(33,37,41)"
-    ,dangerFontColor = "rgb(33,37,41)"
-    ,bodyBackColor = "rgb(255,255,255)"
-    
-    ### header
-    ,logoBackColor = "rgb(24,188,156)"
-    
-    ,headerButtonBackColor = "rgb(24,188,156)"
-    ,headerButtonIconColor = "rgb(44,62,80)"
-    ,headerButtonBackColorHover = "rgb(20,154,128)"
-    ,headerButtonIconColorHover = "rgb(0,0,0)"
-    
-    ,headerBackColor = "rgb(24,188,156)"
-    ,headerBoxShadowColor = ""
-    ,headerBoxShadowSize = "0px 0px 0px"
-    
-    ### sidebar
-    ,sidebarBackColor = "rgb(44,62,80)"
-    ,sidebarPadding = 0
-    
-    ,sidebarMenuBackColor = "inherit"
-    ,sidebarMenuPadding = 0
-    ,sidebarMenuBorderRadius = 0
-    
-    ,sidebarShadowRadius = ""
-    ,sidebarShadowColor = "0px 0px 0px"
-    
-    ,sidebarUserTextColor = "rgb(255,255,255)"
-    
-    ,sidebarSearchBackColor = "rgb(255,255,255)"
-    ,sidebarSearchIconColor = "rgb(44,62,80)"
-    ,sidebarSearchBorderColor = "rgb(255,255,255)"
-    
-    ,sidebarTabTextColor = "rgb(255,255,255)"
-    ,sidebarTabTextSize = 14
-    ,sidebarTabBorderStyle = "none"
-    ,sidebarTabBorderColor = "none"
-    ,sidebarTabBorderWidth = 0
-    
-    ,sidebarTabBackColorSelected = "rgb(30,43,55)"
-    ,sidebarTabTextColorSelected = "rgb(24,188,156)"
-    ,sidebarTabRadiusSelected = "0px"
-    
-    ,sidebarTabBackColorHover = "rgb(44,62,80)"
-    ,sidebarTabTextColorHover = "rgb(24,188,156)"
-    ,sidebarTabBorderStyleHover = "none"
-    ,sidebarTabBorderColorHover = "none"
-    ,sidebarTabBorderWidthHover = 0
-    ,sidebarTabRadiusHover = "0px"
-    
-    ### boxes
-    ,boxBackColor = "rgb(255,255,255)"
-    ,boxBorderRadius = 10
-    ,boxShadowSize = "0px 0px 0px"
-    ,boxShadowColor = ""
-    ,boxTitleSize = 19
-    ,boxDefaultColor = "rgb(52,152,219)"
-    ,boxPrimaryColor = "rgb(44,62,80)"
-    ,boxInfoColor = "rgb(52,152,219)"
-    ,boxSuccessColor = "rgb(0, 179, 89)"
-    ,boxWarningColor = "rgb(243,156,18)"
-    ,boxDangerColor = "rgb(231,76,60)"
-    
-    ,tabBoxTabColor = "rgb(44,62,80)"
-    ,tabBoxTabTextSize = 16
-    ,tabBoxTabTextColor = "rgb(24, 188, 156)"
-    ,tabBoxTabTextColorSelected = "rgb(255, 255, 255)"
-    ,tabBoxBackColor = "rgb(255,255,255)"
-    ,tabBoxHighlightColor = "rgb(255,255,255)"
-    ,tabBoxBorderRadius = 10
-    
-    ### inputs
-    ,buttonBackColor = "rgb(44,62,80)"
-    ,buttonTextColor = "rgb(255,255,255)"
-    ,buttonBorderColor = "rgb(44,62,80)"
-    ,buttonBorderRadius = 5
-    
-    ,buttonBackColorHover = "rgb(30,43,55)"
-    ,buttonTextColorHover = "rgb(255,255,255)"
-    ,buttonBorderColorHover = "rgb(30,43,55)"
-    
-    ,textboxBackColor = "rgb(255,255,255)"
-    ,textboxBorderColor = "rgb(31, 166, 54)"
-    ,textboxBorderRadius = 5
-    ,textboxBackColorSelect = "rgb(255,255,255)"
-    ,textboxBorderColorSelect = "rgb(89,126,162)"
-    
-    ### tables
-    ,tableBackColor = "rgb(255,255,255)"
-    ,tableBorderColor = "rgb(236,240,241)"
-    ,tableBorderTopSize = 1
-    ,tableBorderRowSize = 1
-    
+  
+  ### general
+  appFontFamily = "Arial"
+  ,appFontColor = "rgb(33,37,41)"
+  ,primaryFontColor = "rgb(245,245,245)"
+  ,infoFontColor = "rgb(245,245,245)"
+  ,successFontColor = "rgb(33,37,41)"
+  ,warningFontColor = "rgb(33,37,41)"
+  ,dangerFontColor = "rgb(33,37,41)"
+  ,bodyBackColor = "rgb(255,255,255)"
+  
+  ### header
+  ,logoBackColor = "rgb(24,188,156)"
+  
+  ,headerButtonBackColor = "rgb(24,188,156)"
+  ,headerButtonIconColor = "rgb(44,62,80)"
+  ,headerButtonBackColorHover = "rgb(20,154,128)"
+  ,headerButtonIconColorHover = "rgb(0,0,0)"
+  
+  ,headerBackColor = "rgb(24,188,156)"
+  ,headerBoxShadowColor = ""
+  ,headerBoxShadowSize = "0px 0px 0px"
+  
+  ### sidebar
+  ,sidebarBackColor = "rgb(44,62,80)"
+  ,sidebarPadding = 0
+  
+  ,sidebarMenuBackColor = "inherit"
+  ,sidebarMenuPadding = 0
+  ,sidebarMenuBorderRadius = 0
+  
+  ,sidebarShadowRadius = ""
+  ,sidebarShadowColor = "0px 0px 0px"
+  
+  ,sidebarUserTextColor = "rgb(255,255,255)"
+  
+  ,sidebarSearchBackColor = "rgb(255,255,255)"
+  ,sidebarSearchIconColor = "rgb(44,62,80)"
+  ,sidebarSearchBorderColor = "rgb(255,255,255)"
+  
+  ,sidebarTabTextColor = "rgb(255,255,255)"
+  ,sidebarTabTextSize = 14
+  ,sidebarTabBorderStyle = "none"
+  ,sidebarTabBorderColor = "none"
+  ,sidebarTabBorderWidth = 0
+  
+  ,sidebarTabBackColorSelected = "rgb(30,43,55)"
+  ,sidebarTabTextColorSelected = "rgb(24,188,156)"
+  ,sidebarTabRadiusSelected = "0px"
+  
+  ,sidebarTabBackColorHover = "rgb(44,62,80)"
+  ,sidebarTabTextColorHover = "rgb(24,188,156)"
+  ,sidebarTabBorderStyleHover = "none"
+  ,sidebarTabBorderColorHover = "none"
+  ,sidebarTabBorderWidthHover = 0
+  ,sidebarTabRadiusHover = "0px"
+  
+  ### boxes
+  ,boxBackColor = "rgb(255,255,255)"
+  ,boxBorderRadius = 10
+  ,boxShadowSize = "0px 0px 0px"
+  ,boxShadowColor = ""
+  ,boxTitleSize = 19
+  ,boxDefaultColor = "rgb(52,152,219)"
+  ,boxPrimaryColor = "rgb(44,62,80)"
+  ,boxInfoColor = "rgb(52,152,219)"
+  ,boxSuccessColor = "rgb(0, 179, 89)"
+  ,boxWarningColor = "rgb(243,156,18)"
+  ,boxDangerColor = "rgb(231,76,60)"
+  
+  ,tabBoxTabColor = "rgb(44,62,80)"
+  ,tabBoxTabTextSize = 16
+  ,tabBoxTabTextColor = "rgb(24, 188, 156)"
+  ,tabBoxTabTextColorSelected = "rgb(255, 255, 255)"
+  ,tabBoxBackColor = "rgb(255,255,255)"
+  ,tabBoxHighlightColor = "rgb(255,255,255)"
+  ,tabBoxBorderRadius = 10
+  
+  ### inputs
+  ,buttonBackColor = "rgb(44,62,80)"
+  ,buttonTextColor = "rgb(255,255,255)"
+  ,buttonBorderColor = "rgb(44,62,80)"
+  ,buttonBorderRadius = 5
+  
+  ,buttonBackColorHover = "rgb(30,43,55)"
+  ,buttonTextColorHover = "rgb(255,255,255)"
+  ,buttonBorderColorHover = "rgb(30,43,55)"
+  
+  ,textboxBackColor = "rgb(255,255,255)"
+  ,textboxBorderColor = "rgb(31, 166, 54)"
+  ,textboxBorderRadius = 5
+  ,textboxBackColorSelect = "rgb(255,255,255)"
+  ,textboxBorderColorSelect = "rgb(89,126,162)"
+  
+  ### tables
+  ,tableBackColor = "rgb(255,255,255)"
+  ,tableBorderColor = "rgb(236,240,241)"
+  ,tableBorderTopSize = 1
+  ,tableBorderRowSize = 1
+  
 )
 
 
 
 ui <- dashboardPage(skin = "black",
-    dashboardHeader(title = img(src = "logo.png", height = 51, width = 151,
-                                tags$head(
-                                    tags$style(HTML("
+                    dashboardHeader(title = img(src = "logo.png", height = 51, width = 151,
+                                                tags$head(
+                                                  tags$style(HTML("
           .navbar .navbar-nav {float: right}
           .navbar .navbar-header {float: left}
         "))
-                                ))),
-    dashboardSidebar(
-        sidebarMenu(
-          id="tabs",
-            menuItem("DATA INPUT", tabName = "dashboard", icon = icon("bar-chart-o")),
-            menuItem("PRE-ANALYSIS", tabName = "ayar", icon = icon("cog", lib = "glyphicon")),
-            menuItem("POST-ANALYSIS", icon = icon("table"), tabName = "widgets"),
-            menuItem("ABOUT", tabName = "about", icon = icon("list-alt"))
-        )
-    ),
-    
-    ## Body content
-    dashboardBody(theme_poor_mans_flatly,
-                  tags$head(tags$style(HTML(".small-box {height: 80px}"))),          
-        tabItems(
-            # First tab content
-            tabItem(tabName = "dashboard",
-                    fluidPage(
-                        style = "border: 6px solid green;border-radius: 15px",
-                        cellArgs = list(style = "padding: 6px"),
-                    fluidRow(style = "border: 4px double silver;",
-                    column(width = 4, height = 465,style = "border: 4px double silver;border-radius: 15px",
-                        # Dynamic valueBoxes
-                        box(title = "SelectWave", width = NULL, status="success",solidHeader = TRUE, "A user-friendly app for on-line multivarite data analysis and modelling", align='left'),
-                        csvFileInput("file1", "XCAL (.txt format)"),
-                        csvFileInput("file2", "YCAL (.txt format)"),
-                        csvFileInput("file3", "XVAL (.txt format)"),
-                        csvFileInput("file4", "YVAL (.txt format)"),
-                        actionButton("goButton", "Next!"),
-                        br()),
-
-                    column(style = "border: 4px double silver;border-radius: 15px;",
-                        width = 8,
-                          tabBox(width = NULL,height = 540,
-                            tabPanel("Data Input", div(style = 'overflow-y:scroll;height:450px',
-                                                          tableOutput(outputId = "table1")))
-                    ))))),
-            
-            # Second tab content
-            tabItem(tabName = "widgets",
-                    fluidPage(
-                      style = "border: 6px solid green;border-radius: 15px",
-                      cellArgs = list(style = "padding: 6px"),
-                      fluidRow(style = "border: 4px double silver;",
-                               column(width = 4, height = 465,style = "border: 4px double silver;border-radius: 15px",
-                                      # Dynamic valueBoxes
-                                      box(title = "TARGET VARIABLE", width = NULL, status="success",solidHeader = TRUE,
-                                          textInput("text", "VARIABLE NAME:")),
-                                      box(title = "POST ANALYSIS", width = NULL, status="success",solidHeader = TRUE,
-                                          # Post-analysis
-                                          fluidRow(
-                                            column(8,
-                                                   selectInput("select_sel", ("Variable selection"),
-                                                               choices = list("None" = 1, "VIP" = 2, "SR" = 3, "sMC" = 4, "mRMR" = 5), selected = 1),
-                                            ),
-                                            column(4,
-                                                   textInput("input_sel", label=("cut-off"), value=0))
-                                          ),
-                                          fluidRow(
-                                            column(4,
-                                                   selectInput("select_meth", ("Analysis 2"),
-                                                               choices = list("PLS" = 1, "SVM" = 2), selected = 1),
-                                            ),
-                                            column(4,
-                                                   textInput("input_meth", label=("#comp."), value=10)),
-                                            column(4,
-                                                   textInput("input_meth_cv", label=("CV"), value="10%"))
-                                          ),
-                                          fluidRow(
-                                            column(4,
-                                                   actionButton("btn_analyse", "Apply")),
-                                            column(8,
-                                                   actionButton("btn_plot", "Prediction plot"))
-                                          )),
-                                      br(),
-                                      br(),
-                                      br(),
-                                      br(),
-                                      br()),
-                               
-                               column(style = "border: 4px double silver;border-radius: 15px;",
-                                      width = 8,
-                                      tabBox(width = NULL,height = 540,
-                                             tabPanel("Results Table", DT::dataTableOutput(outputId = "Results2")),
-                                             tabPanel("Prediction Plots", plotOutput("plot2post", height = 400)),
-                                             tabPanel("Selection Plot", plotOutput(outputId = "plot_sel"))
-                                      ))))),
-            # Second tab content
-            tabItem(tabName = "ayar",
-                    fluidPage(
-                      style = "border: 6px solid green;border-radius: 15px",
-                      cellArgs = list(style = "padding: 6px"),
-                      fluidRow(style = "border: 4px double silver;",
-                               column(width = 4, height = 460,style = "border: 4px double silver;border-radius: 15px",
-                                      box(title = "PRE-TREATMENT", width = NULL, status="success",solidHeader = TRUE,
-                                          # Derivatives
-                                          fluidRow(
-                                            column(8,
-                                                   selectInput("select_deriv", ("Derivatives"),
-                                                               choices = list("None" = 1, "First" = 2, "Second" = 3, "Smoothing" = 4), selected = 1),
-                                            ),
-                                            column(4,
-                                                   textInput("input_deriv", label=("points"), value=11))
-                                          ),
-                                          # Pretreatment
-                                          fluidRow(
-                                            column(8,
-                                                   selectInput("select_pre", ("Pretreatment"),
-                                                               choices = list("None" = 1, "SNV" = 2, "MSC" = 3, "EMSC" = 4, "Baseline, poly." = 5), selected = 1),
-                                            ),
-                                            column(4,
-                                                   textInput("input_pre", label=("degree"), value=0))
-                                          ),
-                                          actionButton("btn_spec_plot", "Spectral plot")),
-                                      box(title = "PRE-ANALYSIS", width = NULL, status="success",solidHeader = TRUE,
-                                          # Pre-analysis
-                                          fluidRow(
-                                            column(4,
-                                                   selectInput("select_meth_pre", ("Analysis 1"),
-                                                               choices = list("PLS" = 1), selected = 1),
-                                            ),
-                                            column(4,
-                                                   textInput("input_meth_pre", label=("#comp."), value=10)),
-                                            column(4,
-                                                   textInput("input_meth_cv_pre", label=("CV"), value="10%"))
-                                          ),
-                                          fluidRow(
-                                            column(4,
-                                                   actionButton("btn_analyse_pre", "Apply")),
-                                            column(8,
-                                                   actionButton("btn_plot_pre", "Prediction plot"))
-                                          )),
-                                      br(),
-                                      br(),
-                                      br(),
-                                      actionButton("goButton1", "Next!"),
-                                      br()),
-                               
-                               column(style = "border: 4px double silver;border-radius: 15px;",
-                                      width = 8,
-                                      tabBox(width = NULL,height = 540,
-                                             tabPanel("Spectral Plot", plotOutput("plot1", height = 400)),
-                                             tabPanel("Results Table", DT::dataTableOutput(outputId = "Results1")),
-                                             tabPanel("Prediction Plots", plotOutput("plot2", height = 400))
-                                      ))))),
-            # Second tab content
-            tabItem(tabName = "about",
-                    box(width = 12, title ="About Selectwave",height= 600,status="success",solidHeader = TRUE,
-                        p("The SelectWave application is developed using the shiny package under RStudio platform."),
-                        br(),
-                        p("For more detailed information, please visit",
-                          tags$a("BAF Elektronik Yazilim Tarim Inc.",
-                                 href = "http://www.baf-eyt.com.tr")),
-                        br(),
-                        p("Reference=>SelectWave:Wavelenght Selection and Multivarite Modelling."),
-                        p("Developers=>Dr Fatih Kahriman and Dr Kristian Hovde Liland"),
-                        h3("Specialities:"),
-                        p("- It is an open-source app."),
-                        p("- It is no need to code writing."),
-                        p("- It has well-known multivariate modelling techniques."),
-                        p("- GNU licenced."),
-                        p("- Developed for scientific studies."))
-            )
-        )
-    )
+                                                ))),
+                    dashboardSidebar(
+                      sidebarMenu(
+                        id="tabs",
+                        menuItem("DATA INPUT", tabName = "dashboard", icon = icon("bar-chart-o")),
+                        menuItem("PRE-ANALYSIS", tabName = "ayar", icon = icon("cog", lib = "glyphicon")),
+                        menuItem("POST-ANALYSIS", icon = icon("table"), tabName = "widgets"),
+                        menuItem("ABOUT", tabName = "about", icon = icon("list-alt"))
+                      )
+                    ),
+                    
+                    ## Body content
+                    dashboardBody(theme_poor_mans_flatly,
+                                  tags$head(tags$style(HTML(".small-box {height: 80px}"))),          
+                                  tabItems(
+                                    # First tab content
+                                    tabItem(tabName = "dashboard",
+                                            fluidPage(
+                                              style = "border: 6px solid green;border-radius: 15px",
+                                              cellArgs = list(style = "padding: 6px"),
+                                              fluidRow(style = "border: 4px double silver;",
+                                                       column(width = 4, height = 680,style = "border: 4px double silver;border-radius: 15px",
+                                                              # Dynamic valueBoxes
+                                                              box(title = "SelectWave", width = NULL, status="success",solidHeader = TRUE, "A user-friendly app for on-line multivarite data analysis and modelling", align='left'),
+                                                              csvFileInput("file1", "XCAL (.txt format)"),
+                                                              csvFileInput("file2", "YCAL (.txt format)"),
+                                                              csvFileInput("file3", "XVAL (.txt format)"),
+                                                              csvFileInput("file4", "YVAL (.txt format)"),
+                                                              actionButton("goButton", "Next!"),
+                                                              br()),
+                                                       
+                                                       column(style = "border: 4px double silver;border-radius: 15px;",
+                                                              width = 8,
+                                                              tabBox(width = NULL,height = 750,
+                                                                     tabPanel("Data Input", div(style = 'overflow-y:scroll;height:670px',
+                                                                                                tableOutput(outputId = "table1")))
+                                                              ))))),
+                                    
+                                    # Second tab content
+                                    tabItem(tabName = "widgets",
+                                            fluidPage(
+                                              style = "border: 6px solid green;border-radius: 15px",
+                                              cellArgs = list(style = "padding: 6px"),
+                                              fluidRow(style = "border: 4px double silver;",
+                                                       column(width = 4, height = 680,style = "border: 4px double silver;border-radius: 15px",
+                                                              # Dynamic valueBoxes
+                                                              box(title = "TARGET VARIABLE", width = NULL, status="success",solidHeader = TRUE,
+                                                                  textInput("text", "VARIABLE NAME:")),
+                                                              box(title = "POST ANALYSIS", width = NULL, status="success",solidHeader = TRUE,
+                                                                  # Post-analysis
+                                                                  fluidRow(
+                                                                    column(8,
+                                                                           selectInput("select_sel", ("Variable selection"),
+                                                                                       choices = list("None" = 1, "VIP" = 2, "SR" = 3, "sMC" = 4, "mRMR" = 5), selected = 1),
+                                                                    ),
+                                                                    column(4,
+                                                                           textInput("input_sel", label=("cut-off"), value=0))
+                                                                  ),
+                                                                  fluidRow(
+                                                                    column(4,
+                                                                           selectInput("select_meth", ("Analysis 2"),
+                                                                                       choices = list("PLS" = 1, "SVM" = 2), selected = 1),
+                                                                    ),
+                                                                    column(4,
+                                                                           textInput("input_meth", label=("#comp."), value=10)),
+                                                                    column(4,
+                                                                           textInput("input_meth_cv", label=("CV"), value="10%"))
+                                                                  ),
+                                                                  fluidRow(
+                                                                    column(4,
+                                                                           actionButton("btn_analyse", "Apply")),
+                                                                    column(8,
+                                                                           actionButton("btn_plot", "Prediction plot"))
+                                                                  )),
+                                                              br(),
+                                                              br(),
+                                                              br(),
+                                                              br(),
+                                                              br()),
+                                                       
+                                                       column(style = "border: 4px double silver;border-radius: 15px;",
+                                                              width = 8,
+                                                              tabBox(width = NULL,height = 750,
+                                                                     tabPanel("Results Table", DT::dataTableOutput(outputId = "Results2")),
+                                                                     tabPanel("Prediction Plots", plotOutput("plot2post", height = 650)),
+                                                                     tabPanel("Selection Plot", plotOutput(outputId = "plot_sel"))
+                                                              ))))),
+                                    # Second tab content
+                                    tabItem(tabName = "ayar",
+                                            fluidPage(
+                                              style = "border: 6px solid green;border-radius: 15px",
+                                              cellArgs = list(style = "padding: 6px"),
+                                              fluidRow(style = "border: 4px double silver;",
+                                                       column(width = 4, height = 680,style = "border: 4px double silver;border-radius: 15px",
+                                                              box(title = "PRE-TREATMENT", width = NULL, status="success",solidHeader = TRUE,
+                                                                  # Derivatives
+                                                                  fluidRow(
+                                                                    column(8,
+                                                                           selectInput("select_deriv", ("Derivatives"),
+                                                                                       choices = list("None" = 1, "First" = 2, "Second" = 3, "Smoothing" = 4), selected = 1),
+                                                                    ),
+                                                                    column(4,
+                                                                           textInput("input_deriv", label=("points"), value=11))
+                                                                  ),
+                                                                  # Pretreatment
+                                                                  fluidRow(
+                                                                    column(8,
+                                                                           selectInput("select_pre", ("Pretreatment"),
+                                                                                       choices = list("None" = 1, "SNV" = 2, "MSC" = 3, "EMSC" = 4, "Baseline, poly." = 5), selected = 1),
+                                                                    ),
+                                                                    column(4,
+                                                                           textInput("input_pre", label=("degree"), value=0))
+                                                                  ),
+                                                                  actionButton("btn_spec_plot", "Spectral plot")),
+                                                              box(title = "PRE-ANALYSIS", width = NULL, status="success",solidHeader = TRUE,
+                                                                  # Pre-analysis
+                                                                  fluidRow(
+                                                                    column(4,
+                                                                           selectInput("select_meth_pre", ("Analysis 1"),
+                                                                                       choices = list("PLS" = 1), selected = 1),
+                                                                    ),
+                                                                    column(4,
+                                                                           textInput("input_meth_pre", label=("#comp."), value=10)),
+                                                                    column(4,
+                                                                           textInput("input_meth_cv_pre", label=("CV"), value="10%"))
+                                                                  ),
+                                                                  fluidRow(
+                                                                    column(4,
+                                                                           actionButton("btn_analyse_pre", "Apply")),
+                                                                    column(8,
+                                                                           actionButton("btn_plot_pre", "Prediction plot"))
+                                                                  )),
+                                                              br(),
+                                                              br(),
+                                                              br(),
+                                                              actionButton("goButton1", "Next!"),
+                                                              br()),
+                                                       
+                                                       column(style = "border: 4px double silver;border-radius: 15px;",
+                                                              width = 8,
+                                                              tabBox(width = NULL,height = 750,
+                                                                     tabPanel("Spectral Plot", plotOutput("plot1", height = 650)),
+                                                                     tabPanel("Results Table", DT::dataTableOutput(outputId = "Results1")),
+                                                                     tabPanel("Prediction Plots", plotOutput("plot2", height = 650))
+                                                              ))))),
+                                    # Second tab content
+                                    tabItem(tabName = "about",
+                                            box(width = 12, title ="About Selectwave",height= 750,status="success",solidHeader = TRUE,
+                                                p("The SelectWave application is developed using the shiny package under the RStudio platform."),
+                                                br(),
+                                                p("For more detailed information, please visit",
+                                                  tags$a("BAF Elektronik Yazilim Tarim Inc.",
+                                                         href = "http://www.baf-eyt.com.tr")),
+                                                br(),
+                                                p("Reference   => SelectWave: A Graphical User Interface for Wavelength Selection and Spectral Data Analysis."),
+                                                p("Developers  => Dr Fatih Kahriman and Dr Kristian Hovde Liland"),
+                                                p("User Manual =>", 
+                                                  tags$a("GitHub repository", 
+                                                         href = "https://github.com/fkahriman/SelectWave/blob/master/inst/docs/UserManual.pdf")),
+                                                h3("Specialities:"),
+                                                p("- Open-source, GNU licenced app."),
+                                                p("- Requires no code writing."),
+                                                p("- Well-known multivariate modelling techniques."),
+                                                p("- Developed for scientific studies."))
+                                    )
+                                  )
+                    )
 )
 
 server <- function(input, output,session) {
-
-####OPENING######################################
+  
+  ####OPENING######################################
   showModal(modalDialog(
     title = "Important message",
     "If you are a first time user, please create mandatory files via click create mandatory files button!",
@@ -349,8 +351,8 @@ server <- function(input, output,session) {
     New2 <- write.csv(df[-1,], file = "~/svmtum.csv")
   })  
   
-###### DATA MENU##################################
-    
+  ###### DATA MENU##################################
+  
   XCAL <- callModule(csvFile, "file1",
                      stringsAsFactors = FALSE)
   YCAL <- callModule(csvFile, "file2",
@@ -363,7 +365,7 @@ server <- function(input, output,session) {
   output$table1 <- renderTable({
     head(dataXCAL())
   })
-   
+  
   observeEvent(input$goButton, {
     newtab <- switch(input$tabs,
                      "dashboard" = "ayar",
@@ -371,7 +373,7 @@ server <- function(input, output,session) {
     )
     updateTabItems(session, "tabs", newtab)
   })
-###################PRE-ANALYSIS MENU##########################  
+  ###################PRE-ANALYSIS MENU##########################  
   model_pre_selection <- NULL
   selected_variables <- NULL
   last_model_run <- 0
@@ -459,11 +461,11 @@ server <- function(input, output,session) {
     }
   )
   
-
+  
   observeEvent(input$btn_analyse_pre, {#input$btn2
     # cat("Showing", input$file1, "rows\n")
   })
-
+  
   
   # Change input field for pretreatment based on selection
   observeEvent(input$select_pre,{
@@ -540,7 +542,7 @@ server <- function(input, output,session) {
     updateTabItems(session, "tabs", newtab)
   })
   
-##########POST ANALIYSIS MENU#################################
+  ##########POST ANALIYSIS MENU#################################
   
   # Change input field for variable selction based on selection
   observeEvent(input$select_sel,{
@@ -664,7 +666,7 @@ server <- function(input, output,session) {
         RPD1 = RPD(df6$predY1, df6$YREF)
         
         df <- data.frame("Variable" = input$text, "Derivative" = input$select_deriv, "Pretreatment" = input$select_pre, "Variable Selection" = input$select_sel, "RMSEC" = rmse, "R2Cal" = 100*r2, "RPDCal" = RPD, "RMSEP" = rmse1, "R2Val" = 100*r21, "RPDVal" = RPD1, check.names = FALSE)
-#        df <- data.frame("Variable" = input$text, "Derivative" = input$select_deriv, "Pretreatment" = input$select_pre, "Variable Selection" = input$select_sel, "RMSEC" = RMSEC, "R2Cal" = pls::R2(model_pre_selection, estimate="train")$val[1,1,ncomp+1], "RPDCal" = RPDc, "RMSECV" = RMSECV, "R2Val" = pls::R2(model_pre_selection, estimate="CV")$val[1,1,ncomp+1], "RPDVal" = RPDcv, check.names = FALSE)
+        #        df <- data.frame("Variable" = input$text, "Derivative" = input$select_deriv, "Pretreatment" = input$select_pre, "Variable Selection" = input$select_sel, "RMSEC" = RMSEC, "R2Cal" = pls::R2(model_pre_selection, estimate="train")$val[1,1,ncomp+1], "RPDCal" = RPDc, "RMSECV" = RMSECV, "R2Val" = pls::R2(model_pre_selection, estimate="CV")$val[1,1,ncomp+1], "RPDVal" = RPDcv, check.names = FALSE)
         df
       }
       withProgress(message = 'Processing', value = 0, {
@@ -697,13 +699,13 @@ server <- function(input, output,session) {
     if (input$select_meth==1) {
       op21 <- read.csv("~/plstum.csv")
       dt <- datatable(
-          op21[2:11], extensions = 'Buttons', 'Scroller', options = list(pageLength = 100,
-                                                                                                 dom = 'Bfrtip',
-                                                                                                 buttons = c('copy', 'csv', 'excel'),deferRender = TRUE,
-                                                                                                 scrollY = 200,
-                                                                                                 scroller = TRUE
-          )
-        ) %>%
+        op21[2:11], extensions = 'Buttons', 'Scroller', options = list(pageLength = 100,
+                                                                       dom = 'Bfrtip',
+                                                                       buttons = c('copy', 'csv', 'excel'),deferRender = TRUE,
+                                                                       scrollY = 200,
+                                                                       scroller = TRUE
+        )
+      ) %>%
         formatRound(c('RMSEC', 'R2Cal', 'RPDCal', 'RMSEP', 'R2Val', 'RPDVal'), 2)
     } else if (input$select_meth==2) {
       op22 <- read.csv("~/svmtum.csv")
@@ -717,7 +719,7 @@ server <- function(input, output,session) {
       ) %>%
         formatRound(c('RMSEC', 'R2Cal', 'RPDCal', 'RMSEP', 'R2Val', 'RPDVal'), 2)
     }
-  
+    
   })
   
   observeEvent(input$btn_analyse, { # input$btn2
@@ -756,7 +758,7 @@ server <- function(input, output,session) {
     mdaplot(dataXCAL(), type = 'l')
   })    
   output$plot1 <- renderPlot(
-    op2()
+    op2()#, res=150
   )
   
   op2_post <- eventReactive(input$btn_analyse, {#input$btn1
@@ -780,7 +782,7 @@ server <- function(input, output,session) {
     points(xnum[sel_vars], rep(min(X),length(sel_vars)), col='red', pch=20)
   })
   output$plot_sel <- renderPlot(
-    op2_post()
+    op2_post()#, res=150
   )
   
   observeEvent(input$btn_analyse_pre, { #input$btn2
@@ -844,10 +846,10 @@ server <- function(input, output,session) {
   })    
   
   output$plot2 <- renderPlot(
-    op3()
+    op3()#, res=150
   )
   output$plot2post <- renderPlot(
-    op3_post()
+    op3_post()#, res=150
   )
 }
 
